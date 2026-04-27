@@ -1,0 +1,14 @@
+{
+    "port": 5000,
+    "sharedSecret": "CHANGE_ME",
+
+    "outlook": {
+        "enabled": false,
+        "exePath": "C:\\Program Files\\Microsoft Office\\root\\Office16\\OUTLOOK.EXE",
+        "calendarLookaheadHours": 24
+    },
+
+    "cache": {
+        "statusMs": 20000
+    }
+}

@@ -1,0 +1,102 @@
+{
+    "port": 3000,
+    "title": "Command Deck",
+    "agentUrl": "http://CHANGE_ME_AGENT_IP:5000",
+    "sharedSecret": "CHANGE_ME",
+
+    "polling": {
+        "statusIntervalMs": 30000,
+        "statusCacheMs": 15000,
+        "weatherIntervalMs": 600000,
+        "weatherCacheMs": 600000
+    },
+
+    "ui": {
+        "meetingAlertThresholdMin": 3,
+        "offlineFailureThreshold": 2,
+        "offlineDismissResetMs": 300000,
+        "theme": {
+            "accent": "#58e1c4",
+            "warn": "#f0883e",
+            "bad": "#f85149",
+            "good": "#3fb950"
+        }
+    },
+
+    "weather": {
+        "enabled": true,
+        "latitude": 38.9989,
+        "longitude": -84.6266,
+        "unit": "fahrenheit"
+    },
+
+    "instances": [
+        { "id": "example-dev",  "label": "Example Dev",  "client": "Example Co", "env": "Dev",  "baseUrl": "https://example-dev.example.com" },
+        { "id": "example-prod", "label": "Example Prod", "client": "Example Co", "env": "Prod", "baseUrl": "https://example.example.com" }
+    ],
+
+    "tiles": [
+        {
+            "_comment": "A status tile. statusKey reads from the agent's /status response. command fires on tap.",
+            "id": "outlook",
+            "label": "Outlook",
+            "sublabel": "unread",
+            "color": "#0078D4",
+            "command": "launch_outlook",
+            "statusKey": "outlookUnread"
+        },
+        {
+            "_comment": "A simple launcher tile. command must be a whitelisted handler in the agent.",
+            "id": "teams",
+            "label": "Teams",
+            "sublabel": "open chat",
+            "color": "#5059C9",
+            "command": "launch_teams"
+        },
+        {
+            "_comment": "A direct URL tile.",
+            "id": "example-link",
+            "label": "Example",
+            "sublabel": "any URL",
+            "color": "#22C55E",
+            "command": "open_url",
+            "args": ["https://example.com"]
+        },
+        {
+            "_comment": "An instance-aware tile. Resolves to (active instance baseUrl) + instancePath at click time.",
+            "id": "instance-home",
+            "label": "Home",
+            "sublabel": "current instance",
+            "color": "#7C3AED",
+            "instancePath": "/"
+        },
+        {
+            "_comment": "A group tile. Children show in a modal. Each child is itself a tile of any type.",
+            "id": "example-group",
+            "label": "Example Co",
+            "sublabel": "environments",
+            "color": "#0F4C81",
+            "type": "group",
+            "children": [
+                { "id": "ex-dev",  "label": "Dev",  "sublabel": "example-dev",  "color": "#22C55E", "command": "open_url", "args": ["https://example-dev.example.com"] },
+                { "id": "ex-prod", "label": "Prod", "sublabel": "example",      "color": "#DC2626", "command": "open_url", "args": ["https://example.example.com"] }
+            ]
+        },
+        {
+            "_comment": "An empty group tile — fill it with your own utility tiles.",
+            "id": "utilities",
+            "label": "Utilities",
+            "sublabel": "your tools",
+            "color": "#475569",
+            "type": "group",
+            "children": []
+        },
+        {
+            "id": "lock",
+            "label": "Lock",
+            "sublabel": "workstation",
+            "color": "#6B7280",
+            "command": "lock_workstation"
+        }
+    ]
+}

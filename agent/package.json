@@ -1,0 +1,16 @@
+{
+    "name": "command-deck-agent",
+    "version": "0.1.0",
+    "description": "Windows-side agent for Command Deck",
+    "main": "agent.js",
+    "scripts": {
+        "start": "node agent.js"
+    },
+    "dependencies": {
+        "express": "^4.21.2"
+    },
+    "engines": {
+        "node": ">=18"
+    },
+    "license": "MIT"
+}
