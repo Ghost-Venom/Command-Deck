@@ -9,17 +9,17 @@ Tap tiles to launch apps, open URLs, run scripts. Show live counts (Outlook unre
 ## What it looks like
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
+┌──────────────────────────────────────────────────────────────────────────────┐
 │ ▣ COMMAND DECK   62°  ▷ in 23min · Standup   INSTANCE Dev ▾   ●live  3:47 PM │
-├─────────────────────────────────────────────────────────────────┤
-│ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐                 │
-│ │ Outlook │ │  Teams  │ │   Lock  │ │  Group  │                 │
-│ │   12    │ │   ↗     │ │   ↗     │ │    ⊞    │                 │
-│ ├─────────┤ ├─────────┤ ├─────────┤ ├─────────┤                 │
-│ │   ...   │ │   ...   │ │   ...   │ │   ...   │                 │
-│ └─────────┘ └─────────┘ └─────────┘ └─────────┘                 │
-│                          ...                                     │
-└─────────────────────────────────────────────────────────────────┘
+├──────────────────────────────────────────────────────────────────────────────┤
+│ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐                              │
+│ │ Outlook │ │  Teams  │ │   Lock  │ │  Group  │                              │
+│ │   12    │ │   ↗     │ │   ↗     │ │    ⊞    │                              │
+│ ├─────────┤ ├─────────┤ ├─────────┤ ├─────────┤                              │
+│ │   ...   │ │   ...   │ │   ...   │ │   ...   │                              │
+│ └─────────┘ └─────────┘ └─────────┘ └─────────┘                              │
+│                          ...                                                 │
+└──────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ## What it does
@@ -60,7 +60,7 @@ The Pi runs a Node server that hosts a static dashboard in Chromium kiosk mode. 
 ### On the Pi
 
 ```bash
-git clone https://github.com/yourname/command-deck.git
+git clone https://github.com/Ghost-Venom/command-deck.git
 cd command-deck/pi
 ./setup.sh
 ```
@@ -79,7 +79,7 @@ Save the shared secret it shows you — you'll paste it on the Windows side.
 Open PowerShell (no need for Admin yet — script will tell you if it needs elevation):
 
 ```powershell
-git clone https://github.com/yourname/command-deck.git
+git clone https://github.com/Ghost-Venom/command-deck.git
 cd command-deck\agent
 .\setup.ps1
 ```
